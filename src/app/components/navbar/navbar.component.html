@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light fs-3" href="#">Student App</a>  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-light fs-6" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light fs-6" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Register
+          </a>
+          <div class="dropdown-menu " id="navbarmenu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink='/newstudent'>Student</a>
+            <a class="dropdown-item" routerLink='/newcourse'>Course</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light fs-6" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Summary
+          </a>
+          <div class="dropdown-menu " id="navbarmenu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink='/viewstudents'>Student</a>
+            <a class="dropdown-item" routerLink='/viewcourse'>Course</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

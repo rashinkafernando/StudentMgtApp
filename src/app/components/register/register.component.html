@@ -1,0 +1,82 @@
+<div class="container w-50 mt-4" id="registerForm">
+    <h2 class="display-6 mt-2">Student Registration Form</h2>
+    <form #userForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+        <div class="form-group">
+            <label>Student Name</label>
+            <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="studentModel.name"
+                required>
+        </div>
+        <div class="form-group">
+            <label>Student Age</label>
+            <input type="number" class="form-control" name="age" #age="ngModel" [(ngModel)]="studentModel.age" required>
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="d-flex flex-row justify-content-start">
+                <div class="form-check mt-2">
+                    <label class="form-check-label px-1">Male</label>
+                    <input class="form-check-input ms-1" type="radio" name="gender" value="Male"
+                        [(ngModel)]="studentModel.gender">
+                </div>
+                <div class="form-check mt-2">
+                    <label class="form-check-label px-1">Female</label>
+                    <input class="form-check-input ms-1" type="radio" name="gender" value="Female"
+                        [(ngModel)]="studentModel.gender">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" #email="ngModel" [(ngModel)]="studentModel.email">
+        </div>
+        <div class="form-group">
+            <label>Contact No</label>
+            <input type="tel" class="form-control" name="contactNo" #contactNo="ngModel"
+                [(ngModel)]="studentModel.contactNo">
+        </div>
+        <div class="form-group">
+            <label>Course</label>
+            <select class="form-control" name="course" #course="ngModel" [(ngModel)]="studentModel.course">
+                <option value="">Please select a course</option>
+                <option *ngFor="let course of courses">{{ course }}</option>
+            </select>
+        </div>
+        <!-- <div class="form-group ">
+            <label class="mt-2">Hobbies</label>
+            <div class="d-flex justify-content-start pl-2">
+
+                <div class="form-check mt-2">
+                    <label class="form-check-label">Reading books</label>
+                    <input class="form-check-input" type="checkbox" name="hobbies" #hobbies="ngModel"
+                        [(ngModel)]="studentModel.hobbies" value="Reading books">
+                </div>
+                <div class="form-check mt-2">
+                    <label class="form-check-label">Playing an instrument</label>
+                    <input class="form-check-input" type="checkbox" name="hobbies" #hobbies="ngModel"
+                        [(ngModel)]="studentModel.hobbies" value="Playing an instrument">
+                </div>
+                <div class="form-check mt-2">
+                    <label class="form-check-label">Watching movies</label>
+                    <input class="form-check-input" type="checkbox" name="hobbies" #hobbies="ngModel"
+                        [(ngModel)]="studentModel.hobbies" value="Watching movies">
+                </div>
+                <div class="form-check mt-2">
+                    <label class="form-check-label">Playing a sport</label>
+                    <input class="form-check-input" type="checkbox" name="hobbies" #hobbies="ngModel"
+                        [(ngModel)]="studentModel.hobbies" value="Playing a sport">
+                </div>
+                <div class="form-check mt-2">
+                    <label class="form-check-label">Listening to music</label>
+                    <input class="form-check-input" type="checkbox" name="hobbies" #hobbies="ngModel"
+                        [(ngModel)]="studentModel.hobbies" value="Listening to music">
+                </div>
+                <div class="form-check mt-2">
+                    <label class="form-check-label">Other</label>
+                    <input class="form-check-input" type="checkbox" name="hobbies" #hobbies="ngModel"
+                        [(ngModel)]="studentModel.hobbies" value="Other">
+                </div>
+            </div>
+        </div> -->
+        <button class="btn btn-primary mt-3 mb-3" type="submit">Register</button>
+    </form>
+</div>

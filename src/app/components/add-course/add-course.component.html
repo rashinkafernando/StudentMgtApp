@@ -1,0 +1,41 @@
+<div class="container w-50 mt-4">
+    <h2 class="display-6 mt-2">Course Registration Form</h2>
+
+    {{ registerCourseForm.value | json }}
+
+    <form [formGroup]="registerCourseForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label>Course Name</label>
+            <input type="text" formControlName="courseName" class="form-control" />
+        </div>
+
+        <!-- <div formGroupName="subjects"> -->
+            <div class="form-group">
+                <label>Subject 1</label>
+                <input type="text" formControlName="subject1" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Subject 2</label>
+                <input type="text" formControlName="subject2" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Subject 3</label>
+                <input type="text" formControlName="subject3" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Subject 4</label>
+                <input type="text" formControlName="subject4" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Subject 5</label>
+                <input type="text" formControlName="subject5" class="form-control" />
+            </div>
+        <!-- </div> -->
+        <button class="btn btn-primary mt-3 mb-3" type="submit">Register</button>
+
+    </form>
+
+
+
+
+</div>

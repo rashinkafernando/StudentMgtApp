@@ -1,0 +1,24 @@
+<div class="container w-75 mt-3">
+    <table class="table table-striped table-bordered  p-3">
+        <thead>
+            <tr [ngStyle]="{'color':'mediumpurple', 'font-weight':'bold','text-align':'center'}">
+                <th class="tbl2">Student Name</th>
+                <th class="tbl2">Age</th>
+                <th class="tbl2">Gender</th>
+                <th class="tbl2">Email</th>
+                <th class="tbl2">Contact No</th>
+                <th class="tbl2">Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students" [ngStyle]="{'color': myColor, 'text-align':'center'}">
+                <td class="tbl2">{{ student.name }}</td>
+                <td class="tbl2">{{ student.age }}</td>
+                <td class="tbl2">{{ student.gender }}</td>
+                <td class="tbl2">{{ student.email }}</td>
+                <td class="tbl2">{{ student.contactNo }}</td>
+                <td class="tbl2">{{ student.course }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
