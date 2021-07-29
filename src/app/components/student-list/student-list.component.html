@@ -2,6 +2,7 @@
     <table class="table table-striped table-bordered  p-3">
         <thead>
             <tr [ngStyle]="{'color':'mediumpurple', 'font-weight':'bold','text-align':'center'}">
+                <th class="tbl2">Student ID</th>
                 <th class="tbl2">Student Name</th>
                 <th class="tbl2">Age</th>
                 <th class="tbl2">Gender</th>
@@ -12,12 +13,19 @@
         </thead>
         <tbody>
             <tr *ngFor="let student of students" [ngStyle]="{'color': myColor, 'text-align':'center'}">
+                <td class="tbl2">{{ student.studentID }}</td>
                 <td class="tbl2">{{ student.name }}</td>
                 <td class="tbl2">{{ student.age }}</td>
                 <td class="tbl2">{{ student.gender }}</td>
                 <td class="tbl2">{{ student.email }}</td>
                 <td class="tbl2">{{ student.contactNo }}</td>
                 <td class="tbl2">{{ student.course }}</td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-success" [routerLink]="['/profile',student.studentID, 'details']">Profile</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-info" [routerLink]="['/marks', student.studentID, student.course]">Grades</button>
+                </td>
             </tr>
         </tbody>
     </table>

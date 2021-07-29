@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
 
   courses : string[] = new Array();
 
-  studentModel = new Student('', null, '', '', '', '', null);
+  studentModel = new Student('','', null, '', '', '', '', null);
   submitted = false;
   
   constructor(private _studentService: StudentService, private _router: Router) { }

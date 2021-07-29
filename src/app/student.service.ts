@@ -44,7 +44,6 @@ export class StudentService {
 
   //delete course
   deleteCourse(id: number): Observable<any>{
-    return this._http.delete(this._url + 'course/',id);
-    );
+    return this._http.delete(this._url + 'course/' + id);  
   }
 }

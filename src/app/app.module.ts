@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //add material module
 import { MaterialModule } from './material/material.module';
+import { ProfileComponent } from './components/profile/profile.component';
+import { GradesComponent } from './components/grades/grades.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { MaterialModule } from './material/material.module';
     NavbarComponent,
     StudentListComponent,
     AddCourseComponent,
-    CourseListComponent
+    CourseListComponent,
+    ProfileComponent,
+    GradesComponent
   ],
   imports: [
     BrowserModule,

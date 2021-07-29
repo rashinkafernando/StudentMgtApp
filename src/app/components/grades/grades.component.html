@@ -1,0 +1,108 @@
+<form class="form" [formGroup]="gradeForm" (ngSubmit)="submitData()">
+    <br/>
+    <h2>Student Grades</h2>
+
+    <div class="row">
+        <div class="col-md-2">
+            <label for="studentID">Student ID</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="studentID" name="studentID" readonly formControlName="studentID" />
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="courseName">Course Name</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" readonly id="courseName" name="courseName" formControlName="courseName" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <label for="subject1">Subject 1</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="subject1" name="subject1" formControlName="subject1"/>
+
+            <!-- [ngClass]="{ 'is-invalid': isSubmitted && gradeForm.controls.subject1.errors }" -->         
+        </div>
+        <div class="col-md-3">
+            <div *ngIf="isSubmitted && gradeForm.controls.subject1.errors?.required || gradeForm.controls.subject1.errors?.pattern ">              
+                <p *ngIf="gradeForm.controls.subject1.errors?.required" class="text-danger">Grade is required.</p>   
+                <p *ngIf="gradeForm.controls.subject1.errors?.pattern" class="text-danger">Please enter only numeric values.</p>          
+           </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <label for="subject2">Subject 2</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="subject2" name="subject2" formControlName="subject2" />          
+        </div>
+        <div class="col-md-3">
+            <div *ngIf="isSubmitted && gradeForm.controls.subject2.errors?.required || gradeForm.controls.subject2.errors?.pattern">              
+                <p *ngIf="gradeForm.controls.subject2.errors?.required" class="text-danger">Grade is required.</p>   
+                <p *ngIf="gradeForm.controls.subject2.errors?.pattern" class="text-danger">Please enter only numeric values.</p>      
+           </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <label for="subject3">Subject 3</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="subject3" name="subject3" formControlName="subject3" />            
+        </div>
+        <div class="col-md-3">
+            <div *ngIf="isSubmitted && gradeForm.controls.subject3.errors?.required || gradeForm.controls.subject3.errors?.pattern">              
+                <p *ngIf="gradeForm.controls.subject3.errors?.required" class="text-danger">Grade is required.</p>   
+                <p *ngIf="gradeForm.controls.subject3.errors?.pattern" class="text-danger">Please enter only numeric values.</p>       
+           </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <label for="subject4">Subject 4</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="subject4" name="subject4" formControlName="subject4" />          
+        </div>
+        <div class="col-md-3">
+            <div *ngIf="isSubmitted && gradeForm.controls.subject4.errors?.required || gradeForm.controls.subject4.errors?.pattern">              
+                <p *ngIf="gradeForm.controls.subject4.errors?.required" class="text-danger">Grade is required.</p>   
+                <p *ngIf="gradeForm.controls.subject4.errors?.pattern" class="text-danger">Please enter only numeric values.</p>              
+           </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+            <label for="subject5">Subject 5</label>
+        </div>
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="subject5" name="subject5" formControlName="subject5" />    
+        </div>
+        <div class="col-md-3">
+            <div *ngIf="isSubmitted && gradeForm.controls.subject5.errors?.required || gradeForm.controls.subject5.errors?.pattern">              
+                <p *ngIf="gradeForm.controls.subject5.errors?.required" class="text-danger">Grade is required.</p>   
+                <p *ngIf="gradeForm.controls.subject5.errors?.pattern" class="text-danger">Please enter only numeric values.</p>         
+           </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-3">
+            <button id="btnSubmit" class="btn btn-sm btn-info" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
